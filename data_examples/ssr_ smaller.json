@@ -1,0 +1,1112 @@
+{
+    "https://static.bigbrain.gg/assets/lol/riot_patch_update/prod/versions.json": {
+        "data": [
+            "15.9.1",
+            "15.8.1"
+        ],
+        "loading": false,
+        "error": null,
+        "idle": false
+    },
+    "https://static.bigbrain.gg/assets/lol/riot_patch_update/prod/backup-champions.json": {
+        "data": {
+            "234": {
+                "id": "Viego",
+                "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/Viego.png",
+                "key": "234",
+                "name": "Viego",
+                "passive": {
+                    "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/ViegoP.png",
+                    "name": "Sovereign's Domination"
+                },
+                "primaryRole": "jungle",
+                "skills": [
+                    {
+                        "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/ViegoQ.png",
+                        "name": "Blade of the Ruined King"
+                    },
+                    {
+                        "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/ViegoW.png",
+                        "name": "Spectral Maw"
+                    },
+                    {
+                        "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/ViegoE.png",
+                        "name": "Harrowed Path"
+                    },
+                    {
+                        "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/ViegoR.png",
+                        "name": "Heartbreaker"
+                    }
+                ]
+            },
+            "360": {
+                "id": "Samira",
+                "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/Samira.png",
+                "key": "360",
+                "name": "Samira",
+                "passive": {
+                    "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/SamiraP.png",
+                    "name": "Daredevil Impulse"
+                },
+                "primaryRole": "adc",
+                "skills": [
+                    {
+                        "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/SamiraQ.png",
+                        "name": "Flair"
+                    },
+                    {
+                        "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/SamiraW.png",
+                        "name": "Blade Whirl"
+                    },
+                    {
+                        "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/SamiraE.png",
+                        "name": "Wild Rush"
+                    },
+                    {
+                        "image": "https://static.u.gg/assets/lol/riot_static_ugg_backup/SamiraR.png",
+                        "name": "Inferno Trigger"
+                        // .. only two other champions actually, for some reason this only shows a tiny amount of info, then items
+                    }
+                ]
+            }
+        },
+        "loading": false,
+        "error": null,
+        "idle": false
+    },
+ "https://static.bigbrain.gg/assets/lol/riot_patch_update/prod/legacy-items.json": {
+        "data": {
+            "1041": {
+                "name": "Hunter's Machete",
+                "patch": "10.22"
+            },
+            "1051": {
+                "name": "Brawler's Gloves",
+                "patch": "9.22"
+            },
+            "1059": {
+                "name": "Space Vampiric Scepter",
+                "patch": "9.22"
+            },
+            "1400": {
+                "name": "Enchantment: Warrior",
+                "patch": "10.22"
+            },
+            "1401": {
+                "name": "Enchantment: Cinderhulk",
+                "patch": "10.22"
+            }
+        },
+        "loading": false,
+        "error": null,
+        "idle": false
+    },
+    "https://static.bigbrain.gg/assets/lol/riot_patch_update/prod/legacy-runes.json": {
+          "data": {
+            "8120": {
+                "name": "Ghost Poro",
+                "patch": "14.24"
+            },
+            "8124": {
+                "name": "Predator",
+                "patch": "14.9"
+            },
+        "loading": false,
+        "error": null,
+        "idle": false 
+    },
+    "https://static.bigbrain.gg/assets/lol/riot_patch_update/prod/ornn-items.json": {
+        "data": {
+            "7000": {
+                "name": "Sandshike's Claw",
+                "description": "+15 ability haste\u003cbr/>+80 attack damage \u003cbr/>\u003cbr/>Passive \u003cbr/>\u003cbr/>+29 Lethality (18.04 â 29 (based on level) armor penetration) \u003cbr/>\u003cbr/>MYTHIC PASSIVE: Empowers your other Legendary items with 5 lethality. \u003cbr/>\u003cbr/>Active \u003cbr/>\u003cbr/>UNIQUE â SANDSWIPE: After a 0.2-second cast time, Dash.png dash in a line through the target enemy's location, and upon completing the dash, deal 100 (+ 30% bonus AD) physical damage to the target and increase your damage dealt to them by 15% for the next 3 seconds (60 second cooldown).",
+                "from": [
+                    6693
+                ],
+                "requiredAlly": "Ornn"
+            },
+            "7001": {
+                "name": "Syzgy",
+                "description": "+75 attack damage\u003cbr/>+12% omnivamp \u003cbr/>\u003cbr/>Passive \u003cbr/>\u003cbr/>+26 Lethality (16.18 â 26 (based on level) armor penetration) \u003cbr/>\u003cbr/>UNIQUE â EVER RISING MOON: Hitting an enemy champion with 2 separate attacks or abilities within 1.5 seconds deals 6% of target's maximum health as bonus physical damage and grants you 15% bonus movement speed and a (Melee role.png 150 / Ranged role.png 75) (+ (Melee role.png 40% / Ranged role.png 20%) bonus AD) Hybrid resistances icon.png shield for 2 seconds ((Melee role.png 8 / Ranged role.png 16) second cooldown). \u003cbr/>\u003cbr/>MYTHIC PASSIVE: Empowers your other Legendary items with 4% armor penetration.",
+                "from": [
+                    6692
+                ],
+                "requiredAlly": "Ornn"
+            }
+        },
+        "loading": false,
+        "error": null,
+        "idle": false},  "https://static.bigbrain.gg/assets/lol/riot_static/15.9.1/data/en_US/champion.json": {
+        "data": {
+            "1": {
+                "version": "15.9.1",
+                "id": "Annie",
+                "key": "1",
+                "name": "Annie",
+                "title": "the Dark Child",
+                "image": {
+                    "full": "Annie.png",
+                    "sprite": "champion0.png",
+                    "group": "champion",
+                    "x": 384,
+                    "y": 0,
+                    "w": 48,
+                    "h": 48
+                },
+                "tags": [
+                    "Mage",
+                    "Support"
+                ],
+                "partype": "Mana"
+            },
+            "2": {
+                "version": "15.9.1",
+                "id": "Olaf",
+                "key": "2",
+                "name": "Olaf",
+                "title": "the Berserker",
+                "image": {
+                    "full": "Olaf.png",
+                    "sprite": "champion3.png",
+                    "group": "champion",
+                    "x": 288,
+                    "y": 0,
+                    "w": 48,
+                    "h": 48
+                },
+                "tags": [
+                    "Fighter",
+                    "Tank"
+                ],
+                "partype": "Mana"
+            }
+        },
+        "loading": false,
+        "error": null,
+        "idle": false  },
+    "https://static.bigbrain.gg/assets/lol/riot_patch_update/prod/ugg/patches.json": {
+        "data": [
+            "15_9",
+            "15_8",
+            "15_7"
+        ],
+        "loading": false,
+        "error": null,
+        "idle": false
+    },
+      "https://static.bigbrain.gg/assets/lol/riot_patch_update/prod/ugg/ugg-api-versions.json": {
+        "data": {
+            "13_22": {
+                "builds": "1.5.0",
+                "champion_duos": "1.5.0",
+                "champion_ranking": "1.5.0",
+                "combat": "1.5.0",
+                "counters": "1.5.0",
+                "duos": "1.5.0",
+                "items": "1.5.0",
+                "matchups": "1.5.0",
+                "objectives": "1.5.0",
+                "overview": "1.5.0",
+                "primary_roles": "1.5.0",
+                "rankings": "1.5.0",
+                "runes": "1.5.0"
+            },
+            "15_7": {
+                "builds": "1.5.0",
+                "champion_duos": "1.5.0",
+                "champion_ranking": "1.5.0",
+                "combat": "1.5.0",
+                "counters": "1.5.0",
+                "duos": "1.5.0",
+                "items": "1.5.0",
+                "matchups": "1.5.0",
+                "objectives": "1.5.0",
+                "overview": "1.5.0",
+                "primary_roles": "1.5.0",
+                "rankings": "1.5.0",
+                "runes": "1.5.0"
+            }
+        },
+        "loading": false,
+        "error": null,
+        "idle": false
+    },
+        "https://static.bigbrain.gg/assets/lol/riot_static/15.9.1/data/en_US/champion/Yorick.json": {
+        "data": {
+            "id": "Yorick",
+            "key": "83",
+            "name": "Yorick",
+            "title": "Shepherd of Souls",
+            "image": {
+                "full": "Yorick.png",
+                "sprite": "champion5.png",
+                "group": "champion",
+                "x": 48,
+                "y": 48,
+                "w": 48,
+                "h": 48
+            },
+            "skins": [
+                {
+                    "id": "83000",
+                    "num": 0,
+                    "name": "default",
+                    "chromas": false
+                },
+                {
+                    "id": "83001",
+                    "num": 1,
+                    "name": "Undertaker Yorick",
+                    "chromas": false
+                },
+                {
+                    "id": "83002",
+                    "num": 2,
+                    "name": "Pentakill Yorick",
+                    "chromas": false
+                },
+                {
+                    "id": "83003",
+                    "num": 3,
+                    "name": "Arclight Yorick",
+                    "chromas": false
+                },
+                {
+                    "id": "83004",
+                    "num": 4,
+                    "name": "Meowrick",
+                    "chromas": true
+                },
+                {
+                    "id": "83012",
+                    "num": 12,
+                    "name": "Resistance Yorick",
+                    "chromas": true
+                },
+                {
+                    "id": "83021",
+                    "num": 21,
+                    "name": "Pentakill III: Lost Chapter Yorick",
+                    "chromas": true
+                },
+                {
+                    "id": "83030",
+                    "num": 30,
+                    "name": "Spirit Blossom Yorick",
+                    "chromas": true
+                },
+                {
+                    "id": "83040",
+                    "num": 40,
+                    "name": "Dark Star Yorick",
+                    "chromas": true
+                }
+            ],
+            "tags": [
+                "Fighter",
+                "Tank"
+            ],
+            "partype": "Mana",
+            "spells": [
+                {
+                    "id": "YorickQ",
+                    "name": "Last Rites",
+                    "description": "Yorick deals bonus damage on his next attack and heals himself. If the target is a champion or large monster or if the target dies, a grave will be dug.",
+                    "tooltip": "Yorick's next Attack deals an additional \u003cphysicalDamage>{{ bonusdamage }} physical damage\u003c/physicalDamage> and restores \u003chealing>{{ qheal }} plus {{ missinghealthratio }}% of his missing Health\u003c/healing>, reduced by {{ healreduction }}% against non-Champions. If this Attack hits a Champion or large Monster or kills the target, it leaves a grave.\u003cbr />\u003cbr />When there are 3 or more graves nearby and this Ability has already been used, Yorick can \u003crecast>Recast\u003c/recast> to raise \u003ckeywordMajor>Mist Walkers\u003c/keywordMajor> from all nearby graves.{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "Bonus Damage",
+                            "Healing",
+                            "Cooldown"
+                        ],
+                        "effect": [
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ missinghealthratio }}% -> {{ missinghealthratioNL }}%",
+                            "{{ cooldown }} -> {{ cooldownNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        6,
+                        5.5,
+                        5,
+                        4.5,
+                        4
+                    ],
+                    "cooldownBurn": "6/5.5/5/4.5/4",
+                    "cost": [
+                        20,
+                        20,
+                        20,
+                        20,
+                        20
+                    ],
+                    "costBurn": "20",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "rangeBurn": "0",
+                    "image": {
+                        "full": "YorickQ.png",
+                        "sprite": "spell16.png",
+                        "group": "spell",
+                        "x": 96,
+                        "y": 96,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "YorickW",
+                    "name": "Dark Procession",
+                    "description": "Yorick summons a destructible wall at target location that will block enemy movement.",
+                    "tooltip": "Yorick summons a wall of spirits blocking enemies' path, but not allies'. The wall has \u003chealing>{{ wallhealthtooltip }} Health\u003c/healing> and disappears after {{ circleduration }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "Cooldown",
+                            "Health"
+                        ],
+                        "effect": [
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ wallhealthtooltip }} -> {{ wallhealthtooltipNL }}"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        20,
+                        18,
+                        16,
+                        14,
+                        12
+                    ],
+                    "cooldownBurn": "20/18/16/14/12",
+                    "cost": [
+                        70,
+                        70,
+                        70,
+                        70,
+                        70
+                    ],
+                    "costBurn": "70",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        600,
+                        600,
+                        600,
+                        600,
+                        600
+                    ],
+                    "rangeBurn": "600",
+                    "image": {
+                        "full": "YorickW.png",
+                        "sprite": "spell16.png",
+                        "group": "spell",
+                        "x": 144,
+                        "y": 96,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "YorickE",
+                    "name": "Mourning Mist",
+                    "description": "Yorick throws a globule of Black Mist that reduces armor, damages, slows and marks enemies. Summoned units gain move speed when moving towards marked targets. ",
+                    "tooltip": "Yorick throws a globule of Black Mist that deals \u003cmagicDamage>{{ calc_healthdamage }} max Health magic damage\u003c/magicDamage>, \u003cstatus>Slows\u003c/status> by {{ calc_slow }} for {{ slowduration }} seconds and marks champions and monsters for {{ markduration }} seconds. Marked enemies continuously \u003cspellName>Awaken\u003c/spellName> nearby graves (but not exceeding the maximum of {{ spell.yorickpassive:yorickpassiveghoulmax }}) and suffer \u003cscaleArmor>{{ armorshred*100 }}% reduced Armor\u003c/scaleArmor>.\u003cbr />\u003cbr />Yorick and his summoned units gain \u003cspeed>{{ hasteamount*100 }}% Move Speed\u003c/speed> toward the mark. \u003ckeywordMajor>Mist Walkers\u003c/keywordMajor> will leap once at marked enemies that get away from them.{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "Armor Reduction %",
+                            "Move Speed",
+                            "Cooldown",
+                            "@AbilityResourceName@ Cost",
+                            "Maximum Health Damage"
+                        ],
+                        "effect": [
+                            "{{ armorshred*100.000000 }}% -> {{ armorshrednl*100.000000 }}%",
+                            "{{ hasteamount*100.000000 }}% -> {{ hasteamountnl*100.000000 }}%",
+                            "{{ cooldown }} -> {{ cooldownNL }}",
+                            "{{ cost }} -> {{ costNL }}",
+                            "{{ healthdamage }}% -> {{ healthdamageNL }}%"
+                        ]
+                    },
+                    "maxrank": 5,
+                    "cooldown": [
+                        12,
+                        11,
+                        10,
+                        9,
+                        8
+                    ],
+                    "cooldownBurn": "12/11/10/9/8",
+                    "cost": [
+                        50,
+                        55,
+                        60,
+                        65,
+                        70
+                    ],
+                    "costBurn": "50/55/60/65/70",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        700,
+                        700,
+                        700,
+                        700,
+                        700
+                    ],
+                    "rangeBurn": "700",
+                    "image": {
+                        "full": "YorickE.png",
+                        "sprite": "spell16.png",
+                        "group": "spell",
+                        "x": 192,
+                        "y": 96,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                },
+                {
+                    "id": "YorickR",
+                    "name": "Eulogy of the Isles",
+                    "description": "Yorick summons the Maiden of the Mist that causes Yorick's attacks against the Maiden's target to deal bonus damage. The Maiden will also automatically raise Walkers from dead enemies.",
+                    "tooltip": "Yorick summons the \u003ckeywordMajor>Maiden of the Mist\u003c/keywordMajor> with \u003chealing>{{ yorickbigghoulhealth }} Health\u003c/healing> and \u003cmagicDamage>{{ yorickbigghouldamage }} Magic Attack Damage\u003c/magicDamage> plus {{ rghoulnumbers }} \u003ckeywordMajor>Mist Walkers\u003c/keywordMajor>. The \u003ckeywordMajor>Maiden\u003c/keywordMajor> automatically raises \u003ckeywordMajor>Mist Walkers\u003c/keywordMajor> from nearby enemy deaths and marks enemy Champions with her attacks. When Yorick damages the \u003ckeywordMajor>Maiden's\u003c/keywordMajor> target, he deals \u003cmagicDamage>{{ rmarkdamagepercent }}% max Health magic damage\u003c/magicDamage>.\u003cbr />\u003cbr />After 10 seconds, Yorick can \u003crecast>Recast\u003c/recast> this Ability to free the \u003ckeywordMajor>Maiden\u003c/keywordMajor>, sending her down the nearest lane.{{ spellmodifierdescriptionappend }}",
+                    "leveltip": {
+                        "label": [
+                            "Attack Damage",
+                            "Mark Damage",
+                            "Mist Walkers",
+                            "Cooldown"
+                        ],
+                        "effect": [
+                            "{{ rbigghoulbonusad }} -> {{ rbigghoulbonusadNL }}",
+                            "{{ rmarkdamagepercent }}% -> {{ rmarkdamagepercentNL }}%",
+                            "{{ rghoulnumbers }} -> {{ rghoulnumbersNL }}",
+                            "{{ cooldown }} -> {{ cooldownNL }}"
+                        ]
+                    },
+                    "maxrank": 3,
+                    "cooldown": [
+                        160,
+                        130,
+                        100
+                    ],
+                    "cooldownBurn": "160/130/100",
+                    "cost": [
+                        100,
+                        100,
+                        100
+                    ],
+                    "costBurn": "100",
+                    "datavalues": {},
+                    "effect": [
+                        null,
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0
+                        ]
+                    ],
+                    "effectBurn": [
+                        null,
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ],
+                    "vars": [],
+                    "costType": " {{ abilityresourcename }}",
+                    "maxammo": "-1",
+                    "range": [
+                        600,
+                        600,
+                        600
+                    ],
+                    "rangeBurn": "600",
+                    "image": {
+                        "full": "YorickR.png",
+                        "sprite": "spell16.png",
+                        "group": "spell",
+                        "x": 240,
+                        "y": 96,
+                        "w": 48,
+                        "h": 48
+                    },
+                    "resource": "{{ cost }} {{ abilityresourcename }}"
+                }
+            ],
+            "passive": {
+                "name": "Shepherd of Souls",
+                "description": "\u003cfont color='#FF9900'>The Cursed Horde:\u003c/font> Yorick can summon Mist Walkers to swarm and attack nearby enemies.",
+                "image": {
+                    "full": "Yorick_P.png",
+                    "sprite": "passive5.png",
+                    "group": "passive",
+                    "x": 48,
+                    "y": 48,
+                    "w": 48,
+                    "h": 48
+                }
+            },
+            "recommended": []
+        },
+        "loading": false,
+        "error": null,
+        "idle": false
+    },  "active-mode-arurf": {
+        "loading": false,
+        "error": {
+            "message": "invalid json response body at https://stats2.u.gg/lol/1.5/champion_ranking/world/15_9/urf/overall/1.5.0.json reason: Unexpected token \u003c in JSON at position 0",
+            "type": "invalid-json"
+        },
+        "idle": false
+    },
+    "active-mode-pick_urf": {
+        "loading": false,
+        "error": {
+            "message": "invalid json response body at https://stats2.u.gg/lol/1.5/champion_ranking/world/15_9/pick_urf/overall/1.5.0.json reason: Unexpected token \u003c in JSON at position 0",
+            "type": "invalid-json"
+        },
+        "idle": false
+    },
+    "active-mode-nexus_blitz": {
+        "loading": false,
+        "error": {
+            "message": "invalid json response body at https://stats2.u.gg/lol/1.5/champion_ranking/world/15_9/nexus_blitz/overall/1.5.0.json reason: Unexpected token \u003c in JSON at position 0",
+            "type": "invalid-json"
+        },
+        "idle": false
+    },
+    "active-mode-one_for_all": {
+        "loading": false,
+        "error": {
+            "message": "invalid json response body at https://stats2.u.gg/lol/1.5/champion_ranking/world/15_9/one_for_all/overall/1.5.0.json reason: Unexpected token \u003c in JSON at position 0",
+            "type": "invalid-json"
+        },
+        "idle": false
+    },
+    "active-mode-normal_aram": {
+        "data": true,
+        "loading": false,
+        "error": null,
+        "idle": false
+    },
+    "active-mode-arena": {
+        "data": true,
+        "loading": false,
+        "error": null,
+        "idle": false
+    },
+    "active-mode-arena-duo": {
+        "data": true,
+        "loading": false,
+        "error": null,
+        "idle": false
+    },
+    "https://stats2.u.gg/lol/1.5/primary_roles/15_9/1.5.0.json": {
+        "data": {
+            "1": [
+                5,
+                2,
+                4,
+                3,
+                1
+            ],
+            "2": [
+                4,
+                1,
+                3,
+                5,
+                2
+            ],
+            "3": [
+                5,
+                2,
+                4,
+                1,
+                3
+            ]
+            // ... more data
+        },
+        "loading": false,
+        "error": null,
+        "idle": false
+    },
+        "rankings_emerald_plus_world::https://stats2.u.gg/lol/1.5/rankings/15_9/ranked_solo_5x5/83/1.5.0.json": {
+        "data": {
+            "world_emerald_plus_jungle": {
+                "roleWins": 2111,
+                "roleMatches": 4157,
+                "rank": 20,
+                "total_rank": 54,
+                "avg_damage": 20688.3456819822,
+                "avg_gold": 11996.313928313688,
+                "avg_kda": "2.63",
+                "avg_cs": 186,
+                "win_rate": 50.78,
+                "pick_rate": 0.8,
+                "ban_rate": 16.4,
+                "counters": [
+                    {
+                        "champion_id": 48,
+                        "wins": 14,
+                        "matches": 21,
+                        "win_rate": 66.67
+                    }
+                ],
+                "stdevs": 0.7427142119642961,
+                "effective_winrate": 0.5005627242044778,
+                "bans": 31160,
+                "real_matches": 190011,
+                "total_matches": 502203,
+                "distribution_count": 170,
+                "distribution_mean": 0.5001152959317323,
+                "distribution_stdevs": 0.0006024232006576625,
+                "be_all_picks": 25884
+            },
+            "world_emerald_plus_support":{
+                // ...
+            },
+            "world_emerald_plus_top": {
+                // ...
+            }
+            // ... other roles
+            },
+        "loading": false,
+        "error": null,
+        "idle": false
+     },
+    //  could probably download this once per patch
+    "https://static.bigbrain.gg/assets/lol/riot_patch_update/prod/seo-champion-names.json": {
+        "data": {
+            "1": {
+                "name": "Annie"
+            },
+            "2": {
+                "name": "Olaf"
+            },
+            "3": {
+                "name": "Galio"
+            }
+        },
+        "loading": false,
+        "error": null,
+        "idle": false
+    },
+     "https://stats2.u.gg/lol/1.5/matchups/15_9/ranked_solo_5x5/83/1.5.0.json": {
+        "data": {
+            "na1_challenger_jungle": {
+                "counters": [
+                    {
+                        "champion_id": 421,
+                        "win_rate": 0,
+                        "pick_rate": 50,
+                        "tier": {
+                            "pick_rate": 50,
+                            "win_rate": 0
+                        },
+                        "matches": 2,
+                        "xp_adv_15": -459,
+                        "gold_adv_15": -1141,
+                        "duo_gold_adv_15": 0,
+                        "cs_adv_15": 9,
+                        "duo_cs_adv_15": 0,
+                        "jungle_cs_adv_15": -0.5,
+                        "kill_adv_15": -0.5,
+                        "duo_kill_adv_15": 0,
+                        "duo_xp_adv_15": 0,
+                        "carry_percentage_15": 15,
+                        "duo_carry_percentage_15": 0,
+                        "team_gold_difference_15": -4471
+                    },
+                    {
+                        "champion_id": 59,
+                        "win_rate": 0,
+                        "pick_rate": 25,
+                        "tier": {
+                            "pick_rate": 25,
+                            "win_rate": 0
+                        },
+                        "matches": 1,
+                        "xp_adv_15": -1811,
+                        "gold_adv_15": -2278,
+                        "duo_gold_adv_15": 0,
+                        "cs_adv_15": -5,
+                        "duo_cs_adv_15": 0,
+                        "jungle_cs_adv_15": -15,
+                        "kill_adv_15": -1,
+                        "duo_kill_adv_15": 0,
+                        "duo_xp_adv_15": 0,
+                        "carry_percentage_15": 60,
+                        "duo_carry_percentage_15": 0,
+                        "team_gold_difference_15": -6441
+                    },
+                    {
+                        "champion_id": 91,
+                        "win_rate": 100,
+                        "pick_rate": 25,
+                        "tier": {
+                            "pick_rate": 25,
+                            "win_rate": 100
+                        },
+                        "matches": 1,
+                        "xp_adv_15": -1590,
+                        "gold_adv_15": -1720,
+                        "duo_gold_adv_15": 0,
+                        "cs_adv_15": -5,
+                        "duo_cs_adv_15": 0,
+                        "jungle_cs_adv_15": -25,
+                        "kill_adv_15": -1,
+                        "duo_kill_adv_15": 0,
+                        "duo_xp_adv_15": 0,
+                        "carry_percentage_15": 60,
+                        "duo_carry_percentage_15": 0,
+                        "team_gold_difference_15": -2624
+                    }
+                ],
+                "last_updated": "2025-05-06T14:38:05.239192Z",
+                "matches": 4
+            }
+            // stats from every region rank role permutation
+        },
+        "loading": false,
+        "error": null,
+        "idle": false
+    }
+}
+}
+
+
+    
+
+
+
+            
+
+      
+
+
