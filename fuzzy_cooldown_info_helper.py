@@ -132,8 +132,10 @@ def main():
     # Helper function to format seconds into "Xm Ys"
     def fmt_time(t):
         if t < 60:
-            # round to 1 decimal place, remove trailing .0
-            return str(round(t, 1)).rstrip('0').rstrip('.')
+            # round to 1 decimal place, remove trailing , but ONLY if there was a decimal
+            s = round(t, 1)
+            if s == int(s): s = int(s) # Clean look for exact seconds
+            return str(s)
         if(t==60):
             return "1m"
 
@@ -170,7 +172,7 @@ def main():
 
         # 3. FALLBACK TO CDRAGON
         if not abilities:
-            print(f"(!) Meraki missing data for {champ_slug}. Falling back to Raw Game Files...")
+            # print(f"(!) Meraki missing data for {champ_slug}. Falling back to Raw Game Files...")
 
             dd_champ = fetch_ddragon_details(champ_slug, patch)
             if dd_champ:
@@ -197,30 +199,39 @@ def main():
         console = Console()
         console.print(header_panel)
 
-        # Check for Recharge column
-        show_recharge = any((a["recharge"] and any(x > 0 for x in a["recharge"])) for a in abilities)
         headers = ["Key", "Ability", "Cooldowns"]
-        if show_recharge: headers.append("Recharge")
-
         rows = []
+
         for a in abilities:
-            # Formatting Cooldowns
-            cd_str = "-"
-            if a["cooldowns"] and any(x > 0 for x in a["cooldowns"]):
-                cd_str = ", ".join(fmt_time(x) for x in a["cooldowns"])
+            cd_vals = a["cooldowns"]
+            rec_vals = a["recharge"]
 
-            row = [a["key"], a["name"], cd_str]
+            # Check if it's an ammo ability
+            has_recharge = rec_vals and any(x > 0 for x in rec_vals)
 
-            # Formatting Recharge
-            if show_recharge:
-                rec_str = "-"
-                if a["recharge"] and any(x > 0 for x in a["recharge"]):
-                    rec_str = ", ".join(fmt_time(x) for x in a["recharge"])
-                row.append(rec_str)
+            final_str = "-"
 
-            rows.append(row)
+            if has_recharge:
+                rec_str = ", ".join(fmt_time(x) for x in rec_vals)
+
+                # Check for "Significant" Static Cooldown (> 2s)
+                max_cd = max(cd_vals) if cd_vals else 0
+
+                if max_cd > 2:
+                    # The "Amumu" Case: Show Both
+                    static_str = ", ".join(fmt_time(x) for x in cd_vals)
+                    final_str = f"{static_str} (Cast) / {rec_str} (Recharge)"
+                else:
+                    # The "Teemo" Case: Show Recharge Only
+                    final_str = f"{rec_str} (Recharge)"
+
+            elif cd_vals and any(x > 0 for x in cd_vals):
+                # Standard Ability
+                final_str = ", ".join(fmt_time(x) for x in cd_vals)
+
+            rows.append([a["key"], a["name"], final_str])
+
         print(tabulate(rows, headers=headers, tablefmt="fancy_grid"))
-        # print(tabulate(rows, headers=headers))
 
 import os
 
