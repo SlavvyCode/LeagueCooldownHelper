@@ -1,4 +1,10 @@
 import os
+import sys
+from rich.console import Console
+from rich.table import Table
+from rich.panel import Panel
+from rich.text import Text
+
 import requests
 from tabulate import tabulate
 import platform
@@ -115,76 +121,149 @@ def parse_cdragon(dd_data, cd_data):
         })
     return out
 
+def clear():
+    if platform.system() == "Windows": os.system("cls")
+    else: os.system("clear")
 # --- MAIN LOGIC ---
 def main():
     patch = fetch_latest_patch()
     name_map = load_ddragon_champion_map(patch)
 
-    raw_input = input("Enemy champion: ").strip()
+    # Helper function to format seconds into "Xm Ys"
+    def fmt_time(t):
+        if t < 60:
+            # round to 1 decimal place, remove trailing .0
+            return str(round(t, 1)).rstrip('0').rstrip('.')
+        if(t==60):
+            return "1m"
+
+        m = int(t // 60)
+        s = round(t % 60, 1)
+        if s == int(s): s = int(s) # Clean look for exact seconds
+        formatted_output = f"{m}m {s}"
+        return formatted_output
+
+    raw_input = input("Enemy champion(s) (ex. 'Vi + Gnar'): ").strip()
     if not raw_input: return
 
-    # 1. Identify Champion
-    champ_slug = fuzzy_dd_lookup(raw_input, name_map)
-    print(f"\nLooking up: {champ_slug}...")
+    # Split input by "+" to handle single or botlane (multiple) queries
+    queries = [q.strip() for q in raw_input.split('+') if q.strip()]
 
-    abilities = []
-    source_used = "Unknown"
+    for i, query in enumerate(queries):
+        # Visual separator between champions
+        if i > 0: print("\n" + "="*60)
 
-    # 2. TRY MERAKI FIRST
-    meraki_data = fetch_meraki_champion(champ_slug)
-    if meraki_data:
-        # Check if data is actually valid (sometimes new champs exist but are empty)
-        parsed = parse_meraki(meraki_data)
-        if parsed:
-            abilities = parsed
-            source_used = "Meraki Analytics (Wiki)"
+        # 1. Identify Champion
+        champ_slug = fuzzy_dd_lookup(query, name_map)
+        # print(f"\nLooking up: {champ_slug}...")
 
-    # 3. FALLBACK TO CDRAGON
-    if not abilities:
-        print(f"(!) Meraki missing data for {champ_slug}. Falling back to Raw Game Files...")
+        abilities = []
+        source_used = "Unknown"
 
-        dd_champ = fetch_ddragon_details(champ_slug, patch)
-        if dd_champ:
-            champ_key = int(dd_champ["key"])
-            cd_champ = fetch_cdragon_data(champ_key)
-            if cd_champ:
-                abilities = parse_cdragon(dd_champ, cd_champ)
-                source_used = "Community Dragon (Raw Client)"
+        # 2. TRY MERAKI FIRST
+        meraki_data = fetch_meraki_champion(champ_slug)
+        if meraki_data:
+            parsed = parse_meraki(meraki_data)
+            if parsed:
+                abilities = parsed
+                source_used = "Meraki Analytics (Wiki)"
 
-    # 4. Display
-    if not abilities:
-        print("Error: Could not find data in either source.")
-        return
+        # 3. FALLBACK TO CDRAGON
+        if not abilities:
+            print(f"(!) Meraki missing data for {champ_slug}. Falling back to Raw Game Files...")
 
-    print(f"--- {champ_slug} [{source_used}] ---")
+            dd_champ = fetch_ddragon_details(champ_slug, patch)
+            if dd_champ:
+                champ_key = int(dd_champ["key"])
+                cd_champ = fetch_cdragon_data(champ_key)
+                if cd_champ:
+                    abilities = parse_cdragon(dd_champ, cd_champ)
+                    source_used = "Community Dragon (Raw Client)"
 
-    # Check for Recharge column
-    show_recharge = any((a["recharge"] and any(x > 0 for x in a["recharge"])) for a in abilities)
-    headers = ["Key", "Ability", "Cooldowns"]
-    if show_recharge: headers.append("Recharge")
+        # 4. Display
+        if not abilities:
+            print(f"Error: Could not find data for {champ_slug} in either source.")
+            continue
 
-    rows = []
-    for a in abilities:
-        # Formatting
-        cd_str = "-"
-        if a["cooldowns"] and any(x > 0 for x in a["cooldowns"]):
-            cd_str = ", ".join(str(round(x, 1)) for x in a["cooldowns"])
+        # print(f"--- {champ_slug} ---")
+        # print the champion's slug bolded
+        # print(f"--- \033[1m{champ_slug}\033[0m ---")
+        header_text = Text(
+            champ_slug,
+            style="bold white on blue", # Use a strong style to make it pop!
+            justify="center"
+        )
+        header_panel = Panel(header_text, expand=False, padding=(0, 1))
+        console = Console()
+        console.print(header_panel)
 
-        row = [a["key"], a["name"], cd_str]
+        # Check for Recharge column
+        show_recharge = any((a["recharge"] and any(x > 0 for x in a["recharge"])) for a in abilities)
+        headers = ["Key", "Ability", "Cooldowns"]
+        if show_recharge: headers.append("Recharge")
 
-        if show_recharge:
-            rec_str = "-"
-            if a["recharge"] and any(x > 0 for x in a["recharge"]):
-                rec_str = ", ".join(str(round(x, 1)) for x in a["recharge"])
-            row.append(rec_str)
+        rows = []
+        for a in abilities:
+            # Formatting Cooldowns
+            cd_str = "-"
+            if a["cooldowns"] and any(x > 0 for x in a["cooldowns"]):
+                cd_str = ", ".join(fmt_time(x) for x in a["cooldowns"])
 
-        rows.append(row)
+            row = [a["key"], a["name"], cd_str]
 
-    print(tabulate(rows, headers=headers))
+            # Formatting Recharge
+            if show_recharge:
+                rec_str = "-"
+                if a["recharge"] and any(x > 0 for x in a["recharge"]):
+                    rec_str = ", ".join(fmt_time(x) for x in a["recharge"])
+                row.append(rec_str)
 
-def clear():
-    if platform.system() == "Windows": os.system("cls")
-    else: os.system("clear")
+            rows.append(row)
+        print(tabulate(rows, headers=headers, tablefmt="fancy_grid"))
+        # print(tabulate(rows, headers=headers))
+
+import os
+
+def wait_for_enter_only(prompt="Press Enter to reset..."):
+    """
+    Waits for the user to press Enter.
+    Any other key press is ignored and not printed to the screen.
+    """
+    print(prompt, end='', flush=True)
+
+    # Windows Implementation
+    if os.name == 'nt':
+        import msvcrt
+        while True:
+            # getch() reads a keypress without printing it to the console
+            key = msvcrt.getch()
+            # Check for Enter (Carriage Return \r or Newline \n)
+            if key in [b'\r', b'\n']:
+                break
+
+    # Linux/macOS Implementation
+    else:
+        import tty
+        import termios
+        # Get the file descriptor for standard input
+        fd = sys.stdin.fileno()
+        # Save old terminal settings to restore them later
+        old_settings = termios.tcgetattr(fd)
+        try:
+            # Set terminal to raw mode (no echo, reads char by char)
+            tty.setraw(sys.stdin.fileno())
+            while True:
+                # Read 1 byte
+                char = sys.stdin.read(1)
+                # Check for Enter (Carriage Return \r or Newline \n)
+                if char in ['\r', '\n']:
+                    break
+        finally:
+            # Restore original terminal settings (very important)
+            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+
+
+
 
 if __name__ == "__main__":
     while True:
@@ -192,5 +271,9 @@ if __name__ == "__main__":
             main()
         except Exception as e:
             print(f"\nError: {e}")
-        input("\nPress Enter to restart...")
+        # input("\nPress Enter to restart...")
+        wait_for_enter_only("\nPress Enter to restart...")
         clear()
+
+
+
