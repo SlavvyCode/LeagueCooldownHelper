@@ -190,7 +190,7 @@ def main():
         # print(f"--- \033[1m{champ_slug}\033[0m ---")
         header_text = Text(
             champ_slug,
-            style="bold white on blue", # Use a strong style to make it pop!
+            style="bold white on black", # Use a strong style to make it pop!
             justify="center"
         )
         header_panel = Panel(header_text, expand=False, padding=(0, 1))
