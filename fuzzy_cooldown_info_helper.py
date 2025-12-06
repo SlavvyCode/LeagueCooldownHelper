@@ -233,14 +233,24 @@ def main():
 
         print(tabulate(rows, headers=headers, tablefmt="fancy_grid"))
 
-import os
 
 def wait_for_enter_only(prompt="Press Enter to reset..."):
     """
     Waits for the user to press Enter.
     Any other key press is ignored and not printed to the screen.
     """
+
+    is_ide = (
+            "PYCHARM_HOSTED" in os.environ
+            or "VSCODE_PID" in os.environ
+            or not sys.stdin.isatty()
+    )
+
+    if is_ide:
+        input(prompt)
+        return
     print(prompt, end='', flush=True)
+
 
     # Windows Implementation
     if os.name == 'nt':
