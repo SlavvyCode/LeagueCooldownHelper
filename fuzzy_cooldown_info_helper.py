@@ -129,6 +129,31 @@ def main():
     patch = fetch_latest_patch()
     name_map = load_ddragon_champion_map(patch)
 
+    # Helper to format list of cooldowns (Compresses 1-18 scaling)
+    def fmt_cd_list(vals):
+        if not vals: return "-"
+
+        # Standard short list (e.g. 5 ranks) -> Keep commas
+        if len(vals) <= 10:
+            return ", ".join(fmt_time(x) for x in vals)
+
+        # Long list (18 levels) -> Use ellipses without commas for cleaner look
+        # Extract Levels 1, 6, 12, 18
+        key_levels = []
+        key_levels.append(fmt_time(vals[0])) # Level 1
+
+        if len(vals) >= 6:
+            key_levels.append(fmt_time(vals[5])) # Level 6
+
+        if len(vals) >= 12:
+            key_levels.append(fmt_time(vals[11])) # Level 12
+
+        if len(vals) > 12:
+            key_levels.append(fmt_time(vals[-1])) # Level 18
+
+        # Join with space-ellipses-space (e.g. "16 ... 14.8 ... 12")
+        return ",(...),".join(key_levels)
+
     # Helper function to format seconds into "Xm Ys"
     def fmt_time(t):
         if t < 60:
@@ -208,18 +233,17 @@ def main():
 
             # Check if it's an ammo ability
             has_recharge = rec_vals and any(x > 0 for x in rec_vals)
-
             final_str = "-"
 
             if has_recharge:
-                rec_str = ", ".join(fmt_time(x) for x in rec_vals)
+                rec_str = fmt_cd_list(rec_vals)
 
                 # Check for "Significant" Static Cooldown (> 2s)
                 max_cd = max(cd_vals) if cd_vals else 0
 
                 if max_cd > 2:
                     # The "Amumu" Case: Show Both
-                    static_str = ", ".join(fmt_time(x) for x in cd_vals)
+                    static_str = fmt_cd_list(cd_vals)
                     final_str = f"{static_str} (Cast) / {rec_str} (Recharge)"
                 else:
                     # The "Teemo" Case: Show Recharge Only
@@ -227,7 +251,7 @@ def main():
 
             elif cd_vals and any(x > 0 for x in cd_vals):
                 # Standard Ability
-                final_str = ", ".join(fmt_time(x) for x in cd_vals)
+                final_str = fmt_cd_list(cd_vals)
 
             rows.append([a["key"], a["name"], final_str])
 
